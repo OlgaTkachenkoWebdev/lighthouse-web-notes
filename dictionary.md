@@ -34,3 +34,7 @@ are functions that accepts another function as an argument or function that retu
 ## String literal
 ## Implicit return
 ## API
+## function definition
+## paginated
+## equal, deep equal, strict equal
+## deep copy

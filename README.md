@@ -9,6 +9,7 @@ This repository contains all of the notes taken by [Olga](https://github.com/woo
   * [Day 3](/Week_1/Day_3)
   * [Weekend 1](Week_1/Weekend.md)
 * [Week 2](/Week_2)
+  * [Day 1](/Week_2/Day_1)
   ### Tips
 
 Try experimenting with the comparison operators (`<`, `>`, `===`, etc.) in the node REPL, which you can launch using the `node` command in Vagrant.
