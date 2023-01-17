@@ -2,11 +2,15 @@
 - A testing framework
 - By default, looks in the `test` folder for test files to run
 
+**Mocha** gives us the `describe` and `it` functions. Each `it` is a test, and each test should have at least **one** assertion.
+
 ### Chai
 - An **assertion** library
 - We can use _assertions_ to describe the desired outcome of our code
 - Chai offers three different interfaces: `should`, `expect`, and `assert`
 - For most uses, choosing which interface to use is a matter of preference
+
+**Chai** is an assertion library. It gives us `assertion` functions so that we no longer have to use other assertion functions. Chai assertion functions are deliberately designed to play nice with testing frameworks like Mocha.
 
 ```javascript
 // should
@@ -54,11 +58,13 @@ const { myFunc } = require('./myFunc');
 - Any files that we specify inside of .gitignore will be ignored by git
 
 ```javascript
-# touch .gitignore
-node_modules
-my-file.js
-
-git add .gitignore
+make .gitignore file.
+add node_modules/ line to gitignore file
+run this command 
+git rm -r --cached .
+git add .
+git commit -m "remove gitignore files"
+git push
 ```
 
 

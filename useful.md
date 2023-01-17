@@ -11,7 +11,7 @@ array.length = 0;
 array.splice(0, array.length);
 ```
 ## Explain the difference between `==` and `===`?
-In JavaScript, there are two sets of equality operators. The triple-equal operator `===` behaves like any traditional equality operator would: evaluates to true if the two expressions on either of its sides have the same type and the same value. The double-equal operator, however, tries to coerce the values before comparing them. It is therefore generally good practice to use the `===` rather than `==`. The same holds true for `!==` vs `!=`.
+In JavaScript, there are two sets of equality operators. The triple-equal (**strict**) operator `===` behaves like any traditional equality operator would: evaluates to true if the two expressions on either of its sides have the same type and the same value. The double-equal operator, however, tries to coerce the values before comparing them. It is therefore generally good practice to use the `===` rather than `==`(**abstract**). The same holds true for `!==` vs `!=`.
 
 ## What are the six JavaScript data types?
 - Boolean
@@ -34,3 +34,6 @@ for (let key in object) {
 }
 ```
 In each repetition, one property from the object is associated to the variable (named key above), and the loop is continued until all of the properties of the object are depleted.
+
+## Immutable vs mutable
+If an item is **mutable**, modifying the copy also modifies the original. If it’s **immutable**, modifying the copy does not affect the original.
