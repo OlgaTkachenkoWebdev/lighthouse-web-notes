@@ -37,3 +37,10 @@ In each repetition, one property from the object is associated to the variable (
 
 ## Immutable vs mutable
 If an item is **mutable**, modifying the copy also modifies the original. If it’s **immutable**, modifying the copy does not affect the original.
+
+## .sort
+```js
+array.sort((a, b) => a - b) // ascending (smallest value to largest)
+
+array.sort((a, b) => b - a) // descending (largest value to smallest)
+```
