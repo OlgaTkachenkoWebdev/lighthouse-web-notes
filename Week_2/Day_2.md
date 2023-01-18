@@ -48,3 +48,38 @@ rl.question('What do you think of Node.js? ', (answer) => {
   rl.close();
 });
 ```
+
+## Intro to net
+```js
+// server.js
+const net = require("net");
+const server = net.createServer();
+server.on("connection", (client) => {
+  console.log("New client connected!");
+
+  client.write("Hello from the server!");
+
+  client.setEncoding("utf8"); // interpret data as text
+
+  client.on("data", (data) => {
+    console.log("Message from client: ", data);
+  });
+});
+server.listen(3000, () => {
+  console.log("Server listening on port 3000!");
+});
+// client.js
+const net = require("net");
+const conn = net.createConnection({
+  host: "localhost",
+  port: 3000
+});
+conn.on("data", (data) => {
+  console.log("Server says: ", data);
+});
+conn.on("connect", () => {
+  conn.write("Hello from client!");
+});
+conn.setEncoding("utf8");
+```
+Here we have the foundation of how an app can "call up" another app. The client is always the one establishing the connection to the server. All the client needs is the destination IP address and PORT information.
