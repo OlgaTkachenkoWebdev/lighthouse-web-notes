@@ -111,3 +111,63 @@ Although there are many available DNS Record Types, there is a small subset that
 * MX: Mail Exchange record specifies where email gets sent to
 * CNAME: Canonical Name, an alias for another hostname
 * AAAA: similar to A, but uses IPv6, 128-bit address
+
+
+# Express
+The express framework is the most common framework used for developing Node js applications. The express framework is built on top of the node.js framework and helps in fast-tracking development of server-based applications.
+```js
+var express = require('express'); //using the require function to include the “express module.”
+var app = express(); //Before we can start using the express module, we need to make an object of it.
+app.get('/',function(req,res) //Here we are creating a callback function. This function will be 
+//called whenever anybody browses to the root of our web application which is http://localhost:3000 .
+// The callback function will be used to send the string ‘Hello World’ to the web page.
+{
+res.send('Hello World!'); //n the callback function, we are sending the string “Hello World” back to 
+//the client. The ‘res’ parameter is used to send content back to the web page. This ‘res’ parameter 
+//is something that is provided by the ‘request’ module to enable one to send content back to the web page.
+});
+var server = app.listen(3000,function() {}); //We are then using the listen to function to make our server 
+//application listen to client requests on port no 3000. You can specify any available port over here.
+```
+Routing
+
+```js
+var express = require('express');
+var app = express();
+app.route('/Node').get(function(req,res) //Here we are defining a route if the URL http://localhost:3000/Node 
+//is selected in the browser. To the route, we are attaching a callback function which will be called when we 
+//browse to the Node URL.The function has 2 parameters.
+//The main parameter we will be using is the ‘res’ parameter, which can be used to send information back to the client.
+//The ‘req’ parameter has information about the request being made. Sometimes additional parameters could be sent as 
+//part of the request being made, and hence the ‘req’ parameter can be used to find the additional parameters being sent.
+{
+    res.send("Tutorial on Node"); //We are using the send function to send the string “Tutorial on Node” back to 
+    //the client if the Node route is chosen.
+});
+app.route('/Angular').get(function(req,res) //Here we are defining a route if the URL http://localhost:3000/Angular 
+//is selected in the browser. To the route, we are attaching a callback function which will be called when we browse 
+//to the Angular URL.
+{
+    res.send("Tutorial on Angular");
+});
+app.get('/',function(req,res){
+    res.send('Welcome to Guru99 Tutorials'); //This is the default route which is chosen when one browses to the 
+    //route of the application – http://localhost:3000. When the default route is chosen, the message “Welcome 
+    //to Guru99 Tutorials” will be sent to the client.
+});
+```
+
+```js
+const express  = require("express"); // Import the express library
+const app = express(); // Define our app as an instance of express
+const port = 3000; // Define our base URL as http:\\localhost:3000
+
+app.get("/", function(req,res){ //tells our server that the GET function 
+//is what we want people to do at this endpoint.
+  res.send("Hello World!");
+});
+
+app.listen(port, function () {
+  console.log(`Server running on port ${port}`); // Tell yourself the port number to prevent mistakes in the future.
+});
+```
