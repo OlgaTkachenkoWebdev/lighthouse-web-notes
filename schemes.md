@@ -19,3 +19,12 @@ let variable = function(argument) {
 }
 ```
 
+# anatomy of a URL
+* Protocol
+* Domain (or Host)
+* Port
+* Resource Path
+* Query Parameters
+* Anchor
+
+[Pictures](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)

@@ -1,10 +1,10 @@
-### Mocha
+## Mocha
 - A testing framework
 - By default, looks in the `test` folder for test files to run
 
 **Mocha** gives us the `describe` and `it` functions. Each `it` is a test, and each test should have at least **one** assertion.
 
-### Chai
+## Chai
 - An **assertion** library
 - We can use _assertions_ to describe the desired outcome of our code
 - Chai offers three different interfaces: `should`, `expect`, and `assert`
@@ -26,7 +26,7 @@ assert.typeOf(myVar, 'string');
 assert.equal(myVar, 'hello world');
 ```
 
-### `module.exports` and `require`
+## `module.exports` and `require`
 - We can export functions, objects, etc from a file using the `module.exports` object
 - You can add new keys to the `module.exports` object _or_ you can completely overwrite it with a function/object
 ```JavaScript
@@ -50,7 +50,7 @@ const myFunc = require('./myFunc');
 // if the file exports an object, we can use ES6 destructuring
 const { myFunc } = require('./myFunc');
 ```
-### Ignoring files/folders
+## Ignoring files/folders
 - Sometimes there are files or folders that we do not want git to track for us
 - These files might contain sensitive information such as passwords or API keys
 - They might also be folders such as node_modules which should always be ignored
@@ -68,7 +68,7 @@ git push
 ```
 
 
-### TDD
+## TDD
 - **T**est **D**riven **D**evelopment
 - Tests are written before the code is written
 - We use a process called Red-Green-Refactor
@@ -84,3 +84,47 @@ git push
  ## Useful Links
 - [Node Modules](https://nodejs.org/docs/latest/api/modules.html)
 - [Node Wrapper Function](https://nodejs.org/api/modules.html#modules_the_module_wrapper)
+
+# Object Shorthand in ES6
+## ES6 Property Value Shorthand
+```js
+const age = 33;
+
+const person = {
+  name: 'Pat',
+  age
+};
+```
+```js
+let name = 'John Doe'
+let email = 'john.doe@example.com'
+let age = 25
+
+let user = { name, email, age }
+
+console.log(user)
+
+// {
+//     name: 'John Doe',
+//     email: 'john.doe@example.com',
+//     age: 25
+// }
+```
+You can also combine both regular properties and shorthands in the same object. This is especially useful when you want to assign a different key name to a property than the variable name:
+```js
+let user = { name, userEmail: email, age }
+
+// {
+//     name: 'John Doe',
+//     userEmail: 'john.doe@example.com',
+//     age: 25
+// }
+```
+# setTimeout
+```js
+console.log('first line');
+setTimeout(() => {
+  console.log('timeout line');
+}, 1000);
+console.log('last line');
+```

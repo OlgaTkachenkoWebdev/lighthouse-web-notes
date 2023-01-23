@@ -83,3 +83,5 @@ conn.on("connect", () => {
 conn.setEncoding("utf8");
 ```
 Here we have the foundation of how an app can "call up" another app. The client is always the one establishing the connection to the server. All the client needs is the destination IP address and PORT information.
+
+

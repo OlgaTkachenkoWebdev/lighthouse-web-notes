@@ -38,3 +38,10 @@ are functions that accepts another function as an argument or function that retu
 ## paginated
 ## equal, deep equal, strict equal
 ## deep copy
+## API
+Application Programming Interface
+## DNS
+Domain Name System
+## URL
+## TCP
+Transmission Control Protocol, provides a standard that allows machines to speak to each other.
